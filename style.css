@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+     background: radial-gradient(
+        circle at 50% 10%,
+        hsl(214,47%,23%),
+        hsl(273,49%,15%)
+     );
+    height: 100vh;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+    overflow: hidden;
+}
+
+/* START HEADER */
+    #header{
+        margin:2rem auto;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 1rem ;
+        border: 2px solid hsl(217, 16%, 45%);
+        border-radius: 7px;
+    }
+    #header .titles {
+        font-size: 1rem;
+        line-height: 19px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #header .score-con{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 30px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #header .score-con h4{
+        color: rgba(67, 43, 226, 0.786);
+        letter-spacing: 2px;
+    }
+    #header .score-con span{
+        color: rgb(86, 86, 86);
+        font-size: 2.5rem;
+    }
+    @media (max-width:500px) {
+        #header .titles {
+        font-size: .7rem;
+        line-height: 19px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #header .score-con{
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #header .score-con h4{
+        color: rgba(67, 43, 226, 0.786);
+        letter-spacing: 2px;
+    }
+    #header .score-con span{
+        color: rgb(86, 86, 86);
+        font-size: 2rem;
+    }
+    }
+/* END HEADER */
+
+/* START MAIN */
+    #main{
+        
+        padding: 1rem 2rem;
+        width: 500px;
+        margin: 6rem auto;
+        position: relative;
+    }
+    #main .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    #main .btns .first-con{
+        display: flex;
+        width: 100%;
+        padding: 0 2rem;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+    
+    #main button{
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 20px;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+        outline: none;
+        border: none;
+    }
+    #main button :active{
+        transform: scale(.9);
+    }
+    #main .btns .first-con div,#main .btns .second-con div{
+        border-radius: 50%;
+        box-shadow: inset 0 -6px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+    }
+    #main .btns .paper-con {
+        background:linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%)); 
+        z-index: 100;
+    }
+    #main .btns .scissors-con {
+        background:linear-gradient( hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+        z-index: 100; 
+    }
+    #main .btns .rock-con {
+        background:linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%)); 
+        z-index: 110; 
+    }
+    .second-con{
+        z-index: 100;
+        padding-bottom:1rem ;
+    }
+    #main .triangle{
+        position: absolute;
+        background:url('./images/bg-triangle.svg');
+        width: 500px;
+        height: 300px;
+        left: 10%;
+        background-position:2rem  1.2rem ;
+        background-repeat: no-repeat;
+        transform: scale(1.1);
+    }
+
+    @media(max-width:575px){
+        #main{
+            padding: 1rem .4rem;
+            width: 330px;
+            margin: 6rem auto;
+            position: relative;
+        }
+    }
+    
+    @media(max-width:615px){
+        #main{
+        padding: 1rem ;
+        width: 340px;
+        margin: 6rem auto;
+        position: relative;
+    }
+     #main .triangle{
+        position: absolute;
+        background:url('./images/bg-triangle.svg');
+        width: 400px;
+        height: 400px;
+        left:-12%;
+        top:10px;
+        background-position:2rem  1.2rem ;
+        background-repeat: no-repeat;
+        transform: scale(.9);
+    }
+    #main .btns .first-con{
+        display: flex;
+        width: 100%;
+        padding: 0 1rem;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+    #main .btns img{
+        width: 40px;
+    }
+    
+    .second-con{
+        z-index: 100;
+        
+    }
+    #main .btns .first-con{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+    
+    }
+/* END MAIN */
