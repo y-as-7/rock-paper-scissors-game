@@ -20,36 +20,72 @@
     </div>
     <div class="score-con">
       <h4>score</h4>
-      <span id="score">12</span>
+      <span id="score">0</span>
     </div>
   </section>
   <!--===== END HEADER ===== -->
   
   <!--===== START MAIN ===== -->
-  <section id="main">
+  <section id="main" class="main">
     <div class="btns">
       <div class="triangle">
 
       </div>
       <div class="first-con">
         <div class="paper-con">
-          <button class="paper"><img src="./images/icon-paper.svg" alt="paper" ></button>
+          <button data-choice="paper" class="paper"><img src="./images/icon-paper.svg" alt="paper" ></button>
         </div>
         <div class="scissors-con">
-          <button class="scissors"><img src="./images/icon-scissors.svg" alt="scissors" ></button>
+          <button data-choice="scissors" class="scissors"><img src="./images/icon-scissors.svg" alt="scissors" ></button>
         </div>
       </div>
       <div class="second-con">
         <div class="rock-con">
-          <button class="rock"><img src="./images/icon-rock.svg" alt="rock" ></button>
+          <button data-choice="rock" class="rock"><img src="./images/icon-rock.svg" alt="rock" ></button>
         </div>
       </div>
     </div>
   </section>
   <!--===== END MAIN ===== -->
+  
+  <!--===== START PICK ===== -->
+  <section id="pick" class="pick none" >
+    <div class="con">
+      <div class="you-pick">
+        <h2>you picked</h1>
+          <span class='us'>
+            <div id="you-pick" class="">
+                <button data-choice="rock" class="rock"><img src="./images/icon-rock.svg" alt="rock" ></button>
+              </div>
+          </span>
+      </div>
+      <div class="result">
+        <h1 id="win">you lose</h1>
+        <button id="reset">play again</button>
+      </div>
+      <div class="computer-pick">
+        <h2>
+          computer picked
+        </h1>
+        <span class="">
+          <div id="computer-pick" class="">
+              <button data-choice="rock" class="rock"><img src="./images/icon-rock.svg" alt="rock" ></button>
+            </div>
+        </span>
+      </div>
+    </div>
+  </section>
+  <!--===== END PICK ===== -->
+
 
   <!--===== START RULES ===== -->
-  <section></section>
+  <section id="rules">
+    <button id="rule-btn" class="rule-btn">rules</button>
+    <div   class="none">
+      <img src="./images/image-rules.svg" alt="rules">
+      <button class="close">&times;</button>
+    </div>
+  </section>
   <!--===== END RULES ===== -->
   
   <Script src="app.js"></Script>

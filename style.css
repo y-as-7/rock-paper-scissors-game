@@ -4,7 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    overflow-y: hidden;
+}
 body{
      background: radial-gradient(
         circle at 50% 10%,
@@ -16,7 +18,13 @@ body{
     font-family: 'Barlow', sans-serif;
     overflow: hidden;
 }
+.none {
+    display: none !important;
+}
 
+.opacity{
+    opacity: .1;
+}
 /* START HEADER */
     #header{
         margin:2rem auto;
@@ -193,6 +201,174 @@ body{
         justify-content: space-between;
         margin-bottom: 4rem;
     }
-    
     }
 /* END MAIN */
+
+/* PICK */
+#pick{
+}
+#pick .con{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#pick .con .you-pick,#pick .con .computer-pick{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem 0;
+    overflow: visible;
+    text-align: center;
+}
+.result h1{
+    
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 1rem 0;
+}
+.result button{
+    width: 120px;
+    padding: 5px 10px ;
+    font-size: 1.1rem;
+    color: rgba(255, 17, 17, 0.883);
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+#pick  h2{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+#pick .con .you-pick div,#pick .con .computer-pick div{
+    border-radius: 50%;
+        box-shadow: inset 0 -6px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        z-index: 100;
+        transform: scale(1.1);
+
+}
+#pick .con .you-pick div button,#pick .con .computer-pick div button{
+        border-radius: 50%;
+        padding: 20px;
+        box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+        outline: none;
+        border: none;
+}
+
+@media(max-width:615px){
+
+   
+
+#pick .con{
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.result{
+    margin-bottom:-10rem ;
+}
+}
+@media (max-width:398px) {
+    #pick .con .you-pick div,#pick .con .computer-pick div{
+    border-radius: 50%;
+        box-shadow: inset 0 -6px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        transform: scale(.8);
+
+}
+}
+.user-win{
+    position: relative;
+}
+.user-win::before{
+    content: '';
+    width: 200px;
+    top: -25%;
+    left: -35%;
+    height: 200px;
+    z-index: -100;
+    border-radius: 50%;
+    opacity:.2 ;
+    position: absolute;
+background: radial-gradient(circle at 50%, #333, #333 0%, #eee 0%, #333 80%);}
+/* background: radial-gradient(
+        circle at 50% 10%,
+        hsl(214,47%,23%),
+        hsl(273,49%,15%)
+     ); */
+.pick-rock{
+            background:linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%)); 
+}
+.pick-paper{
+    background:linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%)); 
+}
+.pick-scissors{
+    background:linear-gradient( hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+}
+/* PICK END */
+
+
+/* RULRS */
+#rules{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+#rules .rule-btn{
+    position: absolute;
+    bottom: 2rem;
+    cursor: pointer;
+    right: 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 5px 10px;
+}
+#rules div {
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    z-index: 1000;
+}
+#rules div img{
+    background: #FFF;
+    padding: 3rem 1rem;
+}
+#rules div button{
+    color: #6a5555;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #6a5555;
+    border-radius: 4px;
+    position: absolute;
+    background-color: transparent;
+    margin: 10px 0;
+    z-index: 10000;
+    
+}
+/* END RULES */
