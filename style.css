@@ -356,18 +356,20 @@ background: radial-gradient(circle at 50%, #333, #333 0%, #eee 0%, #333 80%);}
 }
 #rules div img{
     background: #FFF;
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
+    margin: 10px 0;
 }
 #rules div button{
+    width: 20%;
     color: #6a5555;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 5px 10px;
     border: 1px solid #6a5555;
     border-radius: 4px;
     position: absolute;
     background-color: transparent;
-    margin: 10px 0;
+    margin: 20px 0;
     z-index: 10000;
     
 }
